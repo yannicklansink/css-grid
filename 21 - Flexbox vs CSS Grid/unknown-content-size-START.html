@@ -13,8 +13,17 @@
   <!-- Known Columns, Unknown Content Width -->
 
   <div class="container known">
-    <div class="item">Short</div>
-    <div class="item">Longerrrrrr</div>
+    <div class="item">space</div>
+    <div class="item">around</div>
+    <div class="item">
+      <img src="https://source.unsplash.com/300x200" alt="">
+    </div>
+    <div class="item">💩</div>
+  </div>
+
+  <div class="container knowns">
+    <div class="item">space</div>
+    <div class="item">between</div>
     <div class="item">
       <img src="https://source.unsplash.com/300x200" alt="">
     </div>
@@ -24,6 +33,16 @@
   <style>
     .known {
       margin: 100px 0;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-gap: 10px;
+      justify-content: center;
+    }
+
+    .knowns {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      justify-content: space-evenly;
     }
   </style>
 
