@@ -8,11 +8,7 @@
 </head>
 
 <body>
-
-  <!--
-  Thanks To Phillipp Rudloff for the .tip Idea
-  https://codepen.io/kleinfreund/pen/aLQgYy
- -->
+  
   <article class="post">
     <h2>Chapter Three: The Great American Game</h2>
 
@@ -80,8 +76,6 @@
       <p>Buy the album on
         <a href="https://levithepoet.bandcamp.com/album/correspondence-a-fiction">BandCamp</a>
       </p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae totam quia vel eveniet porro, rem ducimus quam incidunt,
-        dicta laborum quod earum tempore natus placeat neque aspernatur pariatur iusto quos.</p>
     </div>
     <p>I know my sweet seductress, and her name is Depression. I wrote best beneath that demon’s destructive oppression</p>
 
@@ -143,8 +137,10 @@
     }
 
     a {
-      color: black;
-      text-decoration: underline wavy var(--yellow);
+      color: white;
+      text-decoration: underline wavy white;
+      background-color: rgb(37, 37, 37);
+      padding: 0 5px 5px 5px;
     }
 
     h1,
@@ -154,6 +150,50 @@
       font-weight: 100;
       margin: 0;
     }
+
+    .post {
+      display: grid;
+      max-width: 1000px;
+      margin: 200px auto;
+      grid-gap: 10px 50px;
+      grid-template-columns: 3fr 12fr 5fr;
+    }
+
+    .post > * {
+      grid-column: 2 / -2;
+    }
+
+    .post>figure {
+      grid-column: 1 / -1;
+    }
+
+    figcaption {
+      font-size: 12px;
+    }
+
+    .post > blockquote {
+      grid-column: 1 / -1;
+      font-size: 60px;
+      font-style: italic;
+    }
+
+    .tip {
+      background: #fff8bc;
+      padding: 10px;
+    }
+
+    .tip-left {
+      grid-column: 1 / span 1;
+      text-align: right;
+      border-right: 2px solid var(--yellow);
+    }
+
+    .tip-right {
+      grid-column: span 1 / -1;
+      border-left: 2px solid var(--yellow);
+    }
+
+
   </style>
 
 </body>

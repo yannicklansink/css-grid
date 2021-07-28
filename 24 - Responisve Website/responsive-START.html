@@ -13,7 +13,7 @@
 
   <div class="wrapper">
 
-    <!-- HERo -->
+    <!-- HERO -->
     <div class="top">
       <header class="hero">
         <h1>Terry's Taco Joint</h1>
@@ -78,7 +78,6 @@
       </div>
     </section>
 
-
     <section class="gallery">
       <h2>Instant Grams</h2>
       <img src="https://source.unsplash.com/random/201x201" alt="">
@@ -95,6 +94,16 @@
   </div>
 
   <script>
+    const navButton = document.querySelector('button[aria-expanded]');
+
+    function toggleNav({ target }) {
+      const expended = target.getAttribute('aria-expanded') === 'true' || false;
+      navButton.setAttribute('aria-expanded', !expended);
+    }
+
+    navButton.addEventListener('click', toggleNav);
+
+
   </script>
   
 </body>
