@@ -4,11 +4,11 @@
 
 :root {
     --shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
-    --border: 10px solid black;
+    --border: 10px solid gold;
 }
 
 body {
-    background: chocolate;
+    background: white;
     padding: 0;
     margin: 0;
 }
@@ -35,15 +35,22 @@ body {
 /* start */
 
 .container {
-    display: flex;
     border: var(--border);
-    height: 100vh;
+    display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .box {
-    width: 300px;
+    flex-basis: 300px;
+    flex-grow: 1;
 }
+
+.box3 {
+    flex-grow: 10;
+}
+
+
 
 
 
